@@ -8,3 +8,5 @@ This website is being created for a restaurant
 - Gallery.html
 - services.html
 
+## Website link
+- https://simyaleza.github.io/Muse_Website/
