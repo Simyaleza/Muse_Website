@@ -18,6 +18,12 @@ body {
     background-color: #0f0f0f;
 }
 
+.blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #f8ae10ef;
+    z-index: -100;
+}
+
 .container-index {
     background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/assets/images/restaurant.jpg);
     background-position: center;
@@ -34,6 +40,8 @@ nav {
     align-items: center;
     padding: 1.1rem 3rem;
     background-color: transparent;
+    max-width: 1600px;
+    z-index: 9999;
 }
 
 nav h1 {
@@ -72,6 +80,23 @@ nav ul li {
 
 .nav-links:hover::before {
     width: 100%;
+}
+
+.navbar-toggle {
+    background: transparent;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: whitesmoke;
+    transition: all 0.3s ease-in-out;
 }
 
 .content-home {
@@ -405,6 +430,18 @@ nav ul li {
     margin-bottom: 1.5rem;
 }
 
+.box span {
+    position: absolute;
+    background-color: #f8af10;
+    padding: 1rem 1.1rem;
+    border-radius: 60px;
+    transform: translateX(-30px) translateY(-30px);
+}
+
+.box span i {
+    font-size: 2rem;
+}
+
 .box {
     flex-basis: 20%;
     padding: 1rem;
@@ -668,6 +705,82 @@ iframe {
     margin-bottom: .5rem;
 }
 
+/* ---------------------footer --------------------- */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem 0 0;
+    color: white;
+    width: 100%;
+}
+
+footer .logo-end {
+    margin-right: 2rem;
+    padding: 1rem 3rem;
+}
+
+footer .logo-end h1 {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+footer .logo-end p {
+    margin-bottom: 1rem;
+}
+
+.icons-end {
+    margin-top: 2rem;
+}
+
+.icons-end i {
+    margin: 0 .5rem 0 0;
+    font-size: 1.1rem;
+    padding: .8rem;
+    border-radius: 50%;
+    border: 1px solid white;
+    transition: all ease .7s;
+}
+
+.icons-end i:hover {
+    background-color: #f8ae10ef;
+}
+
+.company-end,
+.about-end,
+.contact-end {
+    margin-right: 2rem;
+}
+
+.company-end h3,
+.about-end h3,
+.contact-end h3 {
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.company-end h5,
+.about-end h5,
+.contact-end h5 {
+    margin-bottom: .7rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+footer h5:hover {
+    color: #f8ae10ef;
+}
+
+/* --------------------copyright -----------------------*/
+.copyright-sec {
+    color: white;
+    text-align: center;
+    margin: 5rem 0 1rem;
+}
+
 @media (max-width: 1246px) {
     nav {
         padding: 1rem 2rem;
@@ -694,6 +807,65 @@ iframe {
 }
 
 
+@media (max-width:880px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.7rem !important;
+        position: absolute;
+        height: 100svh;
+        width: 250px;
+        top: 0;
+        right: 0;
+        padding: 5rem 1.5rem;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        z-index: 9999;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+
+    }
+
+    .navbar-toggle {
+        display: block;
+        z-index: 99999;
+    }
+
+    .navbar-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .navbar-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .contact .container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .contact-info {
+        padding: 1rem 2rem;
+    }
+
+    .booking-info {
+        flex-direction: column-reverse;
+    }
+
+    .booking-contact {
+        border-left: none;
+        padding-left: 0;
+        padding-right: 2rem;
+        margin: 2rem 0;
+    }
+}
 
 @media (max-width: 800px) {
 
@@ -816,6 +988,21 @@ iframe {
 
 }
 
+
+@media (max-width:480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-container h1 {
+        font-size: 1.7rem;
+    }
+
+    .navbar-menu li a {
+        font-size: 1.2rem;
+        padding: 3px 15px;
+    }
+}
 
 @media (max-width: 390px) {
     nav h1 {
