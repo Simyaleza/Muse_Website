@@ -10,8 +10,12 @@
     text-decoration: none;
 }
 
+*:placeholder-shown {
+    color: whitesmoke;
+}
+
 body {
-    background-color: #333;
+    background-color: #0f0f0f;
 }
 
 .container-index {
@@ -342,6 +346,7 @@ nav ul li {
     padding: 1rem;
 }
 
+/* ------------------------Gallery page ------------------------- */
 .gallery {
     width: 80%;
     margin: auto;
@@ -383,6 +388,286 @@ nav ul li {
 }
 
 
+/* -------------------------- Menu -----------------------*/
+.menu {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.menu-cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.box {
+    flex-basis: 20%;
+    padding: 1rem;
+    border-radius: 5px;
+    transition: .4s ease-in-out;
+    text-align: left;
+}
+
+.box:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    background-color: #22222271;
+    cursor: pointer;
+}
+
+.box img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1/1;
+}
+
+/* ------------------ contact---------- */
+.contact {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.contact .container {
+    display: flex;
+    background-color: black;
+}
+
+iframe {
+    width: 100%;
+}
+
+.map {
+    flex-basis: 65%;
+}
+
+.contact-info {
+    flex-basis: 35%;
+    padding: 0 1rem;
+}
+
+.contact-info h2 {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.contact-info p {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+/* -------------------------- Enquiry ----------------------- */
+.enquiry {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+}
+
+.enquiry h1 {
+    font-size: 3rem;
+}
+
+.enquiry h3 {
+    font-size: 1, 2rem;
+    font-weight: 400;
+    margin-bottom: 1.1rem;
+}
+
+.enquiry form {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: first baseline;
+    padding: 2rem 4rem;
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px 0 rgba(233, 232, 232, 0.2);
+}
+
+.enquiry label {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.enquiry input {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.enquiry textarea {
+    width: 100%;
+    background-color: transparent;
+    padding: .5rem;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.enquiry form button {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    background-color: #f8af12ef;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    align-self: flex-end;
+    transition: 0.5s ease;
+}
+
+.enquiry form button:hover {
+    scale: 1.1;
+}
+
+.underline {
+    height: 2px;
+    width: 100%;
+    background-color: #f8ae10ef;
+}
+
+/* ---------------------- booking ----------------------- */
+.booking {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.booking h1 {
+    font-size: 2.7rem;
+}
+
+.booking h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.booking-info {
+    margin: 2rem auto;
+    display: flex;
+    border-radius: 10px solid;
+
+}
+
+.booking-info form {
+    flex: 1;
+    text-align: left;
+}
+
+.customer-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customer-details section {
+    width: 100%;
+}
+
+.customer-details section input {
+    width: 90%;
+    font-size: 1.3rem;
+    padding: .3rem;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    outline: none;
+    background-color: transparent;
+}
+
+.rest-extract {
+    display: flex;
+    margin: 1rem auto;
+}
+
+#country {
+    font-size: 1rem;
+    flex-basis: 30%;
+    background: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.date-booking {
+    flex-basis: 30%;
+    margin-left: 1rem;
+}
+
+.date-booking input {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    font-size: 1rem;
+}
+
+#booking-date::-webkit-calendar-picker-indicator,
+#booking-time::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+#country option {
+    background: #222;
+    color: whitesmoke;
+}
+
+
+.booking .location textarea {
+    margin: 1rem 0;
+    width: 95%;
+    background-color: transparent;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    font-size: 1rem;
+    padding: .5rem;
+    aspect-ratio: 1/.3;
+    outline: none;
+}
+
+.booking .location button {
+    width: 95%;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: .5rem;
+    background-color: #f8af12ef;
+}
+
+.booking-contact {
+    border-left: 1px solid whitesmoke;
+    padding-left: 2rem;
+    text-align: right;
+}
+
+.booking-contact h1 {
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid whitesmoke;
+}
+
+.booking-contact h2 {
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+}
+
 @media (max-width: 1246px) {
     nav {
         padding: 1rem 2rem;
@@ -407,6 +692,8 @@ nav ul li {
     }
 
 }
+
+
 
 @media (max-width: 800px) {
 
@@ -481,12 +768,52 @@ nav ul li {
         flex-direction: column;
     }
 
+    .contact .container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .contact-info {
+        padding: 1rem 2rem;
+    }
+
+    .booking-info {
+        flex-direction: column-reverse;
+    }
+
+    .booking-contact {
+        border-left: none;
+        padding-left: 0;
+        padding-right: 2rem;
+        margin: 2rem 0;
+    }
 }
 
 @media (max-width:550px) {
     .content-home h1 {
         font-size: 2.8rem;
     }
+
+    .menu-cards {
+        flex-direction: column;
+    }
+
+    .rest-extract {
+        flex-direction: column;
+        text-align: left;
+        width: 95%;
+        margin: 1rem 0;
+    }
+
+    .date-booking {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .booking-contact {
+        text-align: left;
+    }
+
 }
 
 
@@ -524,6 +851,14 @@ nav ul li {
 
     .card h3 {
         font-size: .9rem;
+    }
+
+    .contact h2 {
+        font-size: 1.7rem;
+    }
+
+    iframe {
+        height: 300px;
     }
 
 }
