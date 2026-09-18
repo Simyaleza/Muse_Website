@@ -959,9 +959,26 @@ footer h5:hover {
         padding-right: 2rem;
         margin: 2rem 0;
     }
+
+    footer {
+        flex-direction: column;
+        margin: 0 5rem;
+        text-align: left;
+    }
+
+
+    .logo-end,
+    .company-end,
+    .about-end,
+    .contact-end {
+        margin-top: .7rem;
+        padding: 0 2rem;
+    }
 }
 
 @media (max-width:550px) {
+
+
     .content-home h1 {
         font-size: 2.8rem;
     }
