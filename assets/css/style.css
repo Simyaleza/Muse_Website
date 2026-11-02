@@ -834,6 +834,46 @@ footer h5:hover {
     margin: 5rem 0 1rem;
 }
 
+/* ---------- Form validation & status ---------- */
+.enquiry input.invalid,
+.enquiry textarea.invalid {
+    border-bottom: 2px solid #e74c3c;
+}
+
+.field-error {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.form-status {
+    margin-top: 1.2rem;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+}
+
+.form-status.success {
+    background-color: rgba(46, 204, 113, 0.15);
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+.form-status.error {
+    background-color: rgba(231, 76, 60, 0.15);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.enquiry form button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    scale: 1 !important;
+}
+
 @media (max-width: 1246px) {
     nav {
         padding: 1rem 2rem;
