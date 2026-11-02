@@ -2,10 +2,12 @@
 const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarMenu = document.querySelector(".navbar-menu");
 
-navbarToggle.addEventListener("click", () => {
-  navbarToggle.classList.toggle("active");
-  navbarMenu.classList.toggle("active");
-});
+if (navbarToggle && navbarMenu) {
+  navbarToggle.addEventListener("click", () => {
+    navbarToggle.classList.toggle("active");
+    navbarMenu.classList.toggle("active");
+  });
+}
 
 // ==================== Menu Search ====================
 const searchInput = document.getElementById("menu-search");
@@ -57,7 +59,30 @@ if (searchInput) {
   });
 }
 
-// ==================== Enquiry Form: Validation + Simulated AJAX ====================
+// ==================== Gallery Lightbox (Part 3) ====================
+const galleryImages = document.querySelectorAll(".gallery-cards img");
+
+if (galleryImages.length > 0) {
+  const lightbox = document.createElement("div");
+  lightbox.className = "lightbox";
+
+  const lightboxImg = document.createElement("img");
+  lightbox.appendChild(lightboxImg);
+  document.body.appendChild(lightbox);
+
+  galleryImages.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add("active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+}
+
+// ==================== Enquiry Form: Validation + Netlify AJAX ====================
 const enquiryForm = document.querySelector(".enquiry form");
 
 if (enquiryForm) {
@@ -161,15 +186,30 @@ if (enquiryForm) {
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 
-    setTimeout(() => {
-      showStatus(
-        "success",
-        "Thank you! Your enquiry has been sent. We will get back to you soon.",
-      );
-      enquiryForm.reset();
-      fields.forEach((f) => setFieldError(f, ""));
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalBtnText;
-    }, 1200);
+    // Netlify Form AJAX Submission
+    const formData = new FormData(enquiryForm);
+    const encodedData = new URLSearchParams(formData).toString();
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encodedData,
+    })
+      .then(() => {
+        showStatus(
+          "success",
+          "Thank you! Your enquiry has been sent. We will get back to you soon.",
+        );
+        enquiryForm.reset();
+        fields.forEach((f) => setFieldError(f, ""));
+      })
+      .catch((error) => {
+        showStatus("error", "Oops! Something went wrong. Please try again.");
+        console.error("Form submission error:", error);
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      });
   });
 }

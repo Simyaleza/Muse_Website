@@ -413,6 +413,58 @@ nav ul li {
 }
 
 
+/* =========================================
+   PART 3 ADDITIONS
+   ========================================= */
+
+/* --- Gallery Lightbox Styles --- */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    cursor: zoom-out;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 3px solid #f8ae10ef;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.gallery-cards img {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.gallery-cards img:hover {
+    transform: scale(1.02);
+}
+
 /* -------------------------- Menu -----------------------*/
 .menu {
     width: 90%;

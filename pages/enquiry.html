@@ -47,8 +47,10 @@
       <h1>Enquiry Form</h1>
       <h3>Have questions? Fill out the form below!</h3>
 
-      <!-- Enquiry form -->
-      <form action="#" method="post">
+      <form name="enquiry" method="POST" data-netlify="true">
+        <!-- Hidden input required by Netlify to prevent spam -->
+        <input type="hidden" name="form-name" value="enquiry" />
+
         <label for="name">Name:</label>
         <input
           type="text"
