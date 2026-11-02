@@ -38,9 +38,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.1rem 3rem;
+    padding: 1.1rem 4rem;
     background-color: transparent;
-    max-width: 1600px;
+    width: 100%;
     z-index: 9999;
 }
 
@@ -52,14 +52,14 @@ nav h1 {
 nav ul {
     display: flex;
     list-style: none;
-    justify-content: space-evenly;
     align-items: center;
+    gap: 2.5rem;
 }
 
 nav ul li {
-    padding: 0 1rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
+
 
 
 .nav-links {
@@ -510,7 +510,6 @@ nav ul li {
     display: block;
 }
 
-/* Hide helper class used by the JS filter */
 .hidden {
     display: none !important;
 }
@@ -903,7 +902,6 @@ footer h5:hover {
 @media (max-width: 800px) {
     .box {
         flex-basis: 45%;
-        /* Makes 2 boxes fit on a tablet */
         margin-bottom: 1.5rem;
     }
 }
@@ -911,13 +909,11 @@ footer h5:hover {
 @media (max-width: 550px) {
     .box {
         flex-basis: 100%;
-        /* Makes 1 box take full width on mobile */
         max-width: 350px;
         margin: 1rem auto;
-        /* Centers the box */
     }
 
-    /* Fixes the gallery images squishing */
+
     .image-box {
         flex-basis: 100%;
     }
@@ -1186,7 +1182,7 @@ footer h5:hover {
 
 /* --- Added for Part 2 Feedback: Focus and Active states --- */
 
-/* Active state for buttons (when clicked) */
+
 button:active,
 .content-home a:active,
 .About .content a:active {
@@ -1194,7 +1190,7 @@ button:active,
     opacity: 0.8;
 }
 
-/* Focus state for all input fields and textareas */
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -1203,7 +1199,7 @@ select:focus {
     transition: all 0.3s ease;
 }
 
-/* Focus state for the menu search bar */
+
 .menu-search:focus-within {
     box-shadow: 0 0 10px rgba(248, 174, 16, 0.5);
 }

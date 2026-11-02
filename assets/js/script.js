@@ -161,7 +161,6 @@ if (enquiryForm) {
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 
-    // Simulated AJAX request (no real server needed)
     setTimeout(() => {
       showStatus(
         "success",
