@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/index.html</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/menu.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/gallery.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/book.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://simyaleza.github.io/Muse_Website/pages/enquiry.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
