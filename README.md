@@ -25,6 +25,23 @@ This website is being created for a restaurant. It is a responsive, multi-page w
 
 ## Changelog
 
+### [Part 3] - Final Updates & Feedback Fixes
+- **Fixed Mobile Responsiveness:** Adjusted `.box` flex-basis in CSS to prevent menu items from squishing on mobile screens.
+- **Added Pseudo-classes:** Implemented `:focus` and `:active` effects on buttons, links, and input fields as requested in Part 2 feedback.
+- **Added SEO:** Added meta descriptions, keywords, and optimized page titles across all HTML files.
+- **Added Files:** Created `robots.txt` and `sitemap.xml` in the root directory.
+- **Performance:** Added `loading="lazy"` to menu and about page images to improve page speed.
+
+### [Part 2] - Functionality and Validation
+*(Leave your existing Part 2 text here)*
+
+### [Part 1] - Initial Setup (Improved in Part 2)
+- **Initial Build:** Created the basic HTML structure, navigation, and CSS styling.
+- **Improvements made:** Upgraded the navigation to be fully responsive with a hamburger menu on mobile (added in Part 2), and refined the CSS layout.
+
+
+## Changelog
+
 ### [Part 3.3] - SEO and Final Updates
 - **Added SEO:** Added meta descriptions, keywords, and optimized page titles across all HTML files.
 - **Added Files:** Created `robots.txt` and `sitemap.xml` in the root directory to improve search engine crawling.

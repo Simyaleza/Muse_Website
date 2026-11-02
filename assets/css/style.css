@@ -899,6 +899,30 @@ footer h5:hover {
 
 }
 
+/* Fix for mobile layout squishing */
+@media (max-width: 800px) {
+    .box {
+        flex-basis: 45%;
+        /* Makes 2 boxes fit on a tablet */
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .box {
+        flex-basis: 100%;
+        /* Makes 1 box take full width on mobile */
+        max-width: 350px;
+        margin: 1rem auto;
+        /* Centers the box */
+    }
+
+    /* Fixes the gallery images squishing */
+    .image-box {
+        flex-basis: 100%;
+    }
+}
+
 
 @media (max-width:880px) {
     .navbar-menu {
@@ -1158,4 +1182,28 @@ footer h5:hover {
         height: 300px;
     }
 
+}
+
+/* --- Added for Part 2 Feedback: Focus and Active states --- */
+
+/* Active state for buttons (when clicked) */
+button:active,
+.content-home a:active,
+.About .content a:active {
+    transform: scale(0.95);
+    opacity: 0.8;
+}
+
+/* Focus state for all input fields and textareas */
+input:focus,
+textarea:focus,
+select:focus {
+    border-bottom: 2px solid #f8ae10ef !important;
+    background-color: rgba(248, 174, 16, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Focus state for the menu search bar */
+.menu-search:focus-within {
+    box-shadow: 0 0 10px rgba(248, 174, 16, 0.5);
 }
