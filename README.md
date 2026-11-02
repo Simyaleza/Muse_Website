@@ -19,7 +19,7 @@ This website is being created for a restaurant. It is a responsive, multi-page w
 - `pages/book.html` (Book Now)
 
 ## Website Link
-- https://simyaleza.github.io/Muse_Website/
+- (https://newmuseproject.netlify.app/)
 
 ---
 
