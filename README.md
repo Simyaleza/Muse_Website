@@ -62,3 +62,4 @@ This website is being created for a restaurant. It is a responsive, multi-page w
 - Font Awesome. (2026). *Font Awesome Free*. [Online]. Available at: https://fontawesome.com/
 - Mozilla. (2026). *MDN Web Docs - HTML, CSS, and JavaScript*. [Online]. Available at: https://developer.mozilla.org/
 - W3Schools. (2026). *HTML and CSS Tutorials*. [Online]. Available at: https://www.w3schools.com/
+- Netlify. (2026). *Netlify Forms*. [Online]. Available at: https://docs.netlify.com/forms/setup/
